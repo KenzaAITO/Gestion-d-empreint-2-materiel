@@ -5,6 +5,7 @@ import HomePage from '../components/HomePage.vue';
 import AddDevice from '../components/AddDevice.vue';
 import Device from '../components/Device.vue';
 import ProfilPage from '../components/ProfilPage.vue';
+import FormulaireInscription from '../views/FormulaireInscription.vue';
 // Définition des routes
 const routes = [
   {
@@ -36,6 +37,14 @@ const routes = [
     component: ProfilPage,
     meta: { requiresAuth: true },
   },
+  { 
+    path: '/inscription',
+    name: 'Inscription', 
+    component: FormulaireInscription 
+  },
+  { path: '/',
+    redirect: '/connexion' 
+  }, // Redirection par défaut
 
 
 ];
